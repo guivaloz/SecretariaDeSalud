@@ -6,19 +6,16 @@
 #
 
 # Liberías
-# psycopg2 - Adaptador para la BD PostgreSQL https://pypi.python.org/pypi/psycopg2
-# sys      - Interactuar con otros programas usando estándar de término en sys.exit(1) https://docs.python.org/3.4/library/sys.html
-# tabulate - Bellas tablas https://pypi.python.org/pypi/tabulate
-import psycopg2
-import sys
-from tabulate import tabulate
+import psycopg2               # Adaptador para la BD PostgreSQL https://pypi.python.org/pypi/psycopg2
+import sys                    # Interactuar con otros programas usando estándar de término en sys.exit(1) https://docs.python.org/3.4/library/sys.html
+from tabulate import tabulate # Bellas tablas https://pypi.python.org/pypi/tabulate
 
 # Constante
 limit = 40 # Limitar la cantidad de resultados
 
 try:
     # Puntero a la BD
-    con = psycopg2.connect("host=127.0.01 dbname='base_de_datos' user='usuario' password='cualquiera'")
+    con = psycopg2.connect("host=127.0.0.1 dbname='secretaria_de_salud' user='usuario' password='cualquiera'")
     cur = con.cursor()
     # Definir títulos de las columnas para la tabla a mostrar
     resultados = [['', '', '', '', '']]

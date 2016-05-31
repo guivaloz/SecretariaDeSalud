@@ -7,6 +7,8 @@ Descargar en:
 
     http://www.dgis.salud.gob.mx/contenidos/basesdedatos/da_nacimientos.html
 
+Comandos wget:
+
 Desempacar:
 
     $ unzip sinac_2014.zip

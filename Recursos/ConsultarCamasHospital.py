@@ -6,15 +6,12 @@
 #
 
 # Liberías
-# psycopg2 - Adaptador para la BD PostgreSQL https://pypi.python.org/pypi/psycopg2
-# sys      - Interactuar con otros programas usando estándar de término en sys.exit(1) https://docs.python.org/3.4/library/sys.html
-# tabulate - Bellas tablas https://pypi.python.org/pypi/tabulate
-import psycopg2
-import sys
-from tabulate import tabulate
+import psycopg2               # Adaptador para la BD PostgreSQL https://pypi.python.org/pypi/psycopg2
+import sys                    # Interactuar con otros programas usando estándar de término en sys.exit(1) https://docs.python.org/3.4/library/sys.html
+from tabulate import tabulate # Bellas tablas https://pypi.python.org/pypi/tabulate
 
 # Constantes
-entidad = '05' # Clave INEGI de la entidad Coahuila = 05
+entidad = '05' # Clave INEGI de la entidad, donde 05 = Coahuila de Zaragoza
 
 try:
     # Puntero a la BD
