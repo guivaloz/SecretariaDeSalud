@@ -4,8 +4,8 @@
 
 CREATE TABLE recursos_salud_2014 (
 
-    latitud                           numeric(6,4),      -- Latitude
-    longitud                          numeric(6,4),      -- Longitude
+    latitud                           character varying, -- Latitude
+    longitud                          character varying, -- Longitude
     nombre                            character varying, -- name
     descripcion                       character varying, -- description
     icono                             integer,           -- icon
