@@ -7,7 +7,11 @@ Descargar en:
 
     http://www.dgis.salud.gob.mx/contenidos/basesdedatos/da_recursos.html
 
-Comandos wget:
+Comando wget para descargar los dos archivos ZIP:
+
+    $ wget -cv -i urls-para-wget.txt
+
+O uno por uno:
 
     $ wget http://www.dgis.salud.gob.mx/descargas/datosabiertos/recursos_salud_2013.zip
     $ wget http://www.dgis.salud.gob.mx/descargas/datosabiertos/recursos_salud_2014.zip
