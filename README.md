@@ -9,7 +9,7 @@ Apuntes y programas para alimentar PostgreSQL a partir de los datos abiertos de 
 
 ### Imagen de esa página web al 30 de mayo de 2016:
 
-![Screenshot](screenshot-datos-abiertos.png)
+![Screenshot](imagenes/screenshot-datos-abiertos.png)
 
 ### Primeros pasos para crear la base de datos
 

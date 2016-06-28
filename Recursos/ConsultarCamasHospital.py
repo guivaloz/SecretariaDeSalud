@@ -2,7 +2,7 @@
 # coding: utf-8
 
 #
-# Consultar Camas de Hospital por Municipio
+# Secretaría de Salud - Consultar Camas de Hospital por Municipio
 #
 
 # Liberías
@@ -18,10 +18,11 @@ try:
     con = psycopg2.connect("host=127.0.0.1 dbname='secretaria_de_salud' user='salud' password='cualquiera'")
     cur = con.cursor()
     # Definir títulos de las columnas para la tabla a mostrar
-    resultados = [['Entidad', 'Municipio', 'THosp', 'TNoHosp', 'Urgencias', 'CirAmb', 'TrabParto', 'PostParto', 'TerInten', 'TerInter', 'Otras']]
+    resultados = [['Clave', 'Municipio', 'THosp', 'TNoHosp', 'Urgencias', 'CirAmb', 'TrabParto', 'PostParto', 'TerInten', 'TerInter', 'Otras']]
     # Consultar
     cur.execute("""
         SELECT
+            municipio,
             municipio_nombre,
             SUM(camas_hospitalizacion_total),
             SUM(camas_no_hospitalizacion_total),
@@ -37,11 +38,11 @@ try:
         WHERE
             entidad = %s
         GROUP BY
-            municipio_nombre
+            municipio, municipio_nombre
         ORDER BY
-            municipio_nombre ASC""", (entidad,))
+            municipio ASC""", (entidad,))
     renglones = cur.fetchall()
-    # Bucle por los renglones
+    # Bucle por los registros
     for renglon in renglones:
         resultados.append(renglon)
     # Mostrar los resultados en una tabla en pantalla, la primera fila tiene encabezados

@@ -1,5 +1,11 @@
 *.csv
+*.CSV
 *.desktop
 *.geany
 *.xlsx
 *.zip
+*.ZIP
+*.qgs
+*.qgs~
+Descargas
+Desempacados
