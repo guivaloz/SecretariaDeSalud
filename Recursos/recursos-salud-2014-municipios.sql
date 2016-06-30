@@ -20,7 +20,9 @@ CREATE TABLE recursos_salud_2014_municipios (
     camas_recuperacion_postparto      integer,  -- número de camas en área de recuperación postparto
     camas_terapia_intensiva           integer,  -- número de camas en área de terapia intensiva
     camas_terapia_intermedia          integer,  -- número de camas en área de terapia intermedia
-    camas_otras_areas                 integer   -- número de camas en otras áreas (no considerando área de hospitalización)
+    camas_otras_areas                 integer,  -- número de camas en otras áreas (no considerando área de hospitalización)
+
+    camas_hospitalizacion_tasa        decimal(6,4)  -- tasa de camas: cantidad de camas por cada 10 mil habitantes
 
 );
 

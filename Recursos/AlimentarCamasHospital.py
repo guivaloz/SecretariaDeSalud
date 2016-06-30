@@ -51,6 +51,7 @@ try:
         # Definir variables
         entidad                        = renglon[0]
         municipio                      = renglon[1]
+        clave                          = entidad + municipio
         camas_hospitalizacion_total    = renglon[2]
         camas_no_hospitalizacion_total = renglon[3]
         camas_urgencias                = renglon[4]
@@ -85,7 +86,8 @@ try:
             camas_terapia_intensiva,
             camas_terapia_intermedia,
             camas_otras_areas,
-            entidad + municipio,))
+            clave,))
+        print("  Actualizado el municipio con clave %s" % clave)
     # Ejecutar comandos SQL
     con.commit()
     # Mensaje final
